@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8e3038">
+  <meta name="description" content="Hán Học — công cụ học tiếng Trung cho người Việt: từ vựng, ngữ pháp, luyện tập và ôn tập.">
+  <title>Hán Học — 汉学</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Hán Học - trang chủ">
+      <span class="brand-mark">汉</span><span><strong>Hán Học</strong><small>中文学习空间</small></span>
+    </a>
+    <div class="top-actions">
+      <button id="themeToggle" class="icon-button" type="button" aria-label="Bật hoặc tắt giao diện tối">◐</button>
+      <span class="local-badge">Học tập cá nhân</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">YOUR CHINESE STUDY SPACE</span>
+        <h1>Học tiếng Trung,<br><em>từng bước vững chắc.</em></h1>
+        <p>Từ vựng, ngữ pháp và bài luyện ngắn dành cho người Việt đang bắt đầu học tiếng Trung.</p>
+        <a class="button button-light" href="#vocabulary">Bắt đầu học <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <span class="art-circle"></span><span class="art-hanzi">学</span>
+        <span class="art-caption">每天进步一点点</span>
+      </div>
+    </section>
+
+    <section class="progress-section" aria-labelledby="progressTitle">
+      <div class="section-heading">
+        <div><span class="eyebrow">YOUR PROGRESS</span><h2 id="progressTitle">Tiến độ của bạn</h2></div>
+        <span class="muted small">Lưu trên thiết bị này</span>
+      </div>
+      <div class="stats-grid">
+        <article class="stat-card"><span class="stat-icon">字</span><div><strong id="statLearned">0</strong><span>Từ đã học</span></div></article>
+        <article class="stat-card"><span class="stat-icon">✓</span><div><strong id="statCorrect">0</strong><span>Câu trả lời đúng</span></div></article>
+        <article class="stat-card"><span class="stat-icon">％</span><div><strong id="statAccuracy">—</strong><span>Độ chính xác</span></div></article>
+        <article class="stat-card"><span class="stat-icon">☆</span><div><strong id="statSaved">0</strong><span>Từ cần ôn</span></div></article>
+      </div>
+    </section>
+
+    <nav class="main-nav" aria-label="Các chức năng học tập">
+      <a href="#vocabulary" class="nav-link active" data-section="vocabulary">📚 <span>Từ vựng</span></a>
+      <a href="#practice" class="nav-link" data-section="practice">✍️ <span>Luyện tập</span></a>
+      <a href="#grammar" class="nav-link" data-section="grammar">🧩 <span>Ngữ pháp</span></a>
+      <a href="#sentence" class="nav-link" data-section="sentence">💬 <span>Đặt câu</span></a>
+      <a href="#review" class="nav-link" data-section="review">🔖 <span>Ôn tập</span></a>
+    </nav>
+
+    <section id="vocabulary" class="content-section">
+      <div class="section-heading">
+        <div><span class="eyebrow">WORD BANK</span><h2>Kho từ vựng</h2><p class="muted">Học chữ Hán, pinyin và cách dùng trong câu.</p></div>
+      </div>
+      <div class="filter-row">
+        <label class="field-label">Tìm từ<input id="wordSearch" type="search" placeholder="汉字, pinyin hoặc nghĩa..." autocomplete="off"></label>
+        <label class="field-label">Nhãn cấp độ<select id="levelFilter"><option value="all">Tất cả nhãn</option><option value="HSK 1–2 (tham khảo)">HSK 1–2 (tham khảo)</option><option value="Từ bổ sung">Từ bổ sung</option></select></label>
+        <label class="field-label">Chủ đề<select id="topicFilter"><option value="all">Tất cả chủ đề</option><option value="greeting">Chào hỏi</option><option value="people">Con người</option><option value="study">Học tập</option><option value="time">Thời gian</option><option value="verb">Động từ</option><option value="daily">Sinh hoạt</option></select></label>
+      </div>
+      <div class="word-layout">
+        <article class="word-card" id="wordCard" aria-live="polite">
+          <div class="word-card-top"><span class="tag" id="wordLevel">HSK 1–2 (tham khảo)</span><button id="saveWord" class="save-button" type="button" aria-pressed="false">☆ Lưu ôn tập</button></div>
+          <div class="word-face"><div class="hanzi" id="wordHanzi">你好</div><div class="pinyin" id="wordPinyin">nǐ hǎo</div><p class="word-meaning hidden" id="wordMeaning">Xin chào</p><p class="reveal-hint" id="revealHint">Thử nhớ nghĩa trước khi lật thẻ.</p></div>
+          <div class="example-box"><span class="example-label">VÍ DỤ</span><p class="example-hanzi" id="exampleHanzi">你好！</p><p class="muted" id="examplePinyin">Nǐ hǎo!</p><p id="exampleTranslation">Xin chào!</p></div>
+          <div class="card-actions"><button id="revealWord" class="button button-primary" type="button">Hiện nghĩa</button><button id="speakWord" class="button button-secondary" type="button">🔊 Nghe phát âm</button></div>
+          <div class="card-actions"><button id="prevWord" class="button button-quiet" type="button">← Trước</button><span id="wordCounter" class="muted small">1 / 1</span><button id="nextWord" class="button button-quiet" type="button">Tiếp →</button></div>
+          <p id="wordStatus" class="status-message" role="status"></p>
+        </article>
+        <aside class="side-note">
+          <span class="note-icon">✦</span><h3>Mẹo học từ mới</h3>
+          <ol><li>Nhìn chữ Hán và đọc pinyin thành tiếng.</li><li>Tự nhớ nghĩa trước khi bấm “Hiện nghĩa”.</li><li>Đọc ví dụ để hiểu cách dùng từ.</li><li>Lưu những từ bạn muốn ôn lại.</li></ol>
+          <p class="muted small">Nhãn cấp độ trong bản mẫu chỉ mang tính định hướng; hãy đối chiếu với giáo trình hoặc danh sách HSK mà lớp đang sử dụng.</p>
+        </aside>
+      </div>
+      <p id="emptyWords" class="empty-state hidden">Không tìm thấy từ phù hợp. Hãy thử từ khóa hoặc bộ lọc khác.</p>
+    </section>
+
+    <section id="practice" class="content-section section-divider">
+      <div class="section-heading"><div><span class="eyebrow">QUICK PRACTICE</span><h2>Luyện tập nhanh</h2><p class="muted">Chọn đáp án và xem giải thích ngay.</p></div></div>
+      <div class="practice-toolbar">
+        <label class="field-label">Dạng bài<select id="quizType"><option value="meaning">Nghĩa tiếng Việt</option><option value="pinyin">Pinyin</option><option value="sentence">Hoàn thành câu</option></select></label>
+        <label class="field-label">Nhãn cấp độ<select id="quizLevel"><option value="all">Tất cả nhãn</option><option value="HSK 1–2 (tham khảo)">HSK 1–2 (tham khảo)</option><option value="Từ bổ sung">Từ bổ sung</option></select></label>
+        <button id="newQuiz" type="button" class="button button-secondary">Đổi câu</button>
+      </div>
+      <article class="quiz-card">
+        <div class="quiz-meta"><span class="tag" id="quizTag">Từ vựng</span><span id="quizNumber" class="muted small">Câu mới</span></div>
+        <div id="quizPrompt" class="quiz-prompt"><div class="hanzi">谢谢</div><p>Chọn nghĩa đúng.</p></div>
+        <div id="quizOptions" class="quiz-options"></div>
+        <div id="quizFeedback" class="feedback" role="status" aria-live="polite"></div>
+        <div class="quiz-footer"><span id="quizScore" class="muted small">Chưa trả lời câu nào.</span><button id="nextQuiz" class="button button-primary" type="button" disabled>Câu tiếp theo →</button></div>
+      </article>
+    </section>
+
+    <section id="grammar" class="content-section section-divider">
+      <div class="section-heading"><div><span class="eyebrow">GRAMMAR NOTES</span><h2>Ngữ pháp nền tảng</h2><p class="muted">Mẫu câu ngắn, giải thích bằng tiếng Việt.</p></div></div>
+      <div id="grammarList" class="grammar-grid"></div>
+      <article class="compare-card"><span class="eyebrow">DỄ NHẦM LẪN</span><h3>知道 zhīdào và 认识 rènshi</h3><div class="compare-grid"><div><strong>知道</strong><p class="pinyin">zhīdào</p><p>Biết một thông tin hoặc sự việc.</p><p class="example-hanzi">我知道。</p><p class="muted">Wǒ zhīdào. — Tôi biết rồi.</p></div><div><strong>认识</strong><p class="pinyin">rènshi</p><p>Quen biết một người hoặc nhận ra điều gì đó.</p><p class="example-hanzi">我认识他。</p><p class="muted">Wǒ rènshi tā. — Tôi quen anh ấy.</p></div></div></article>
+    </section>
+
+    <section id="sentence" class="content-section section-divider">
+      <div class="section-heading"><div><span class="eyebrow">SENTENCE LAB</span><h2>Phòng luyện đặt câu</h2><p class="muted">Tập viết câu và đối chiếu với mẫu tham khảo.</p></div></div>
+      <div class="sentence-layout">
+        <article class="sentence-card">
+          <label class="field-label">Chọn tình huống<select id="sentencePattern"><option value="study">Tôi học tiếng Trung.</option><option value="like">Tôi thích uống trà.</option><option value="question">Bạn là sinh viên phải không?</option><option value="negative">Tôi không uống cà phê.</option><option value="custom">Tự đặt câu</option></select></label>
+          <div class="prompt-box"><span class="example-label">GỢI Ý</span><p id="sentencePrompt">Hãy viết: Tôi học tiếng Trung.</p></div>
+          <label class="field-label">Câu tiếng Trung của bạn<textarea id="sentenceInput" rows="3" placeholder="Nhập chữ Hán giản thể tại đây..."></textarea></label>
+          <div class="card-actions"><button id="checkSentence" class="button button-primary" type="button">Đối chiếu câu mẫu</button><button id="clearSentence" class="button button-quiet" type="button">Xóa nội dung</button></div>
+          <div id="sentenceResult" class="result-box" role="status" aria-live="polite"></div>
+        </article>
+        <aside class="side-note"><span class="note-icon">文</span><h3>Giới hạn của công cụ</h3><p>Chức năng này chỉ so sánh câu bạn nhập với câu mẫu đã có. Một câu khác mẫu vẫn có thể đúng về ngữ pháp hoặc tự nhiên trong ngữ cảnh khác.</p><p class="muted small">Chưa tích hợp AI chấm ngữ pháp toàn diện. Nếu phát triển bản AI, hãy gọi API qua backend và không đặt API key trong mã frontend.</p></aside>
+      </div>
+    </section>
+
+    <section id="review" class="content-section section-divider">
+      <div class="section-heading"><div><span class="eyebrow">REVIEW LIST</span><h2>Từ cần ôn tập</h2><p class="muted">Danh sách này được lưu trên trình duyệt hiện tại.</p></div><button id="clearSaved" class="button button-quiet" type="button">Xóa danh sách</button></div>
+      <div id="reviewList" class="review-list"></div>
+      <p id="reviewEmpty" class="empty-state">Bạn chưa lưu từ nào. Hãy vào Kho từ vựng và bấm “Lưu ôn tập”.</p>
+    </section>
+
+    <footer class="footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">汉</span><span><strong>Hán Học</strong><small>中文学习空间</small></span></a><p>Học đều mỗi ngày, tiến bộ từng chút một.</p><button id="resetProgress" class="text-button" type="button">Đặt lại tiến độ học</button><p class="tiny muted">Bản học tập chạy trên trình duyệt. Dữ liệu học tập không được đồng bộ giữa các thiết bị.</p></footer>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

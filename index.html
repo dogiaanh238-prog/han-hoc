@@ -11,17 +11,71 @@
   <script src="script.js" defer></script>
 </head>
 <body>
- <a href="./tro-choi.html" style="
-  display: inline-block;
-  padding: 12px 22px;
-  margin: 16px;
-  background: #cc4b37;
-  color: white;
+ 
+<style>
+.game-entry {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border: 1px solid #e8b7a8;
+  border-radius: 20px;
+  background: #fff9f2;
+  color: #302820;
   text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-">
-  🎮 Học mà chơi
+  box-shadow: 0 8px 28px rgba(91, 51, 35, .16);
+  font-family: inherit;
+  transition: transform .2s, box-shadow .2s;
+}
+.game-entry:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(91, 51, 35, .22);
+}
+.game-entry-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: #c94d39;
+  color: white;
+  font-size: 24px;
+}
+.game-entry-title {
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+}
+.game-entry-desc {
+  display: block;
+  margin-top: 4px;
+  color: #796c60;
+  font-size: 12px;
+}
+@media (max-width: 600px) {
+  .game-entry {
+    right: 14px;
+    bottom: 14px;
+    padding: 11px 14px;
+    gap: 9px;
+  }
+  .game-entry-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+</style>
+
+<a class="game-entry" href="./tro-choi.html">
+  <span class="game-entry-icon">🎮</span>
+  <span>
+    <span class="game-entry-title">Học mà chơi ↗</span>
+    <span class="game-entry-desc">Chơi vui · Nhớ từ lâu</span>
+  </span>
 </a>
   <header class="topbar">
     <a class="brand" href="#home" aria-label="Hán Học - trang chủ">

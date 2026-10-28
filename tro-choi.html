@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fff8ef">
+<title>Học mà chơi · Hán Học 汉学</title>
+<style>
+:root{--ink:#29251f;--muted:#756d63;--paper:#fffaf3;--card:#fff;--line:#eee2d4;--red:#c84e3a;--red2:#a93629;--peach:#ffe4d5;--gold:#f1c66d;--green:#2e8065;--blue:#456f9c;--shadow:0 12px 32px #6e42200d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+button,select{font:inherit}button{cursor:pointer;border:0}.wrap{width:min(1120px,92%);margin:auto}.top{padding:18px 0;border-bottom:1px solid var(--line);background:#fffaf3eF;position:sticky;top:0;z-index:10;backdrop-filter:blur(12px)}.nav{display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;gap:11px;align-items:center;text-decoration:none;color:inherit;font-weight:850}.seal{width:43px;height:43px;border-radius:14px;background:var(--red);color:white;display:grid;place-items:center;font-size:22px;box-shadow:0 5px 12px #c84e3a30}.brand small{display:block;font-weight:600;color:var(--muted);font-size:11px;letter-spacing:.08em}.navlinks{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.navlinks a,.pillbtn{border:1px solid var(--line);background:white;color:var(--ink);padding:9px 13px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:750}.hero{padding:48px 0 26px;display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:center}.eyebrow{color:var(--red);font-weight:850;font-size:12px;letter-spacing:.13em;text-transform:uppercase}.hero h1{font-size:clamp(32px,5vw,55px);line-height:1.08;letter-spacing:-.04em;margin:10px 0 14px}.hero h1 span{color:var(--red)}.hero p{color:var(--muted);max-width:600px;margin:0 0 20px}.heroart{background:linear-gradient(145deg,#ffe9d8,#fff5df);border:1px solid #f5ddc8;border-radius:28px;padding:25px;min-height:220px;display:grid;place-items:center;position:relative;overflow:hidden}.heroart:before,.heroart:after{content:"";position:absolute;border-radius:50%;background:#fff9;}.heroart:before{width:150px;height:150px;right:-35px;top:-45px}.heroart:after{width:90px;height:90px;left:-24px;bottom:-30px}.bigchar{font-size:100px;line-height:1;color:var(--red);font-weight:900;text-shadow:3px 4px #fff;z-index:1}.floating{position:absolute;z-index:2;background:white;padding:8px 12px;border-radius:13px;font-weight:800;box-shadow:var(--shadow);font-size:13px}.f1{top:22px;left:18px;transform:rotate(-5deg)}.f2{right:18px;bottom:24px;transform:rotate(4deg)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:8px 0 34px}.stat{background:white;border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:var(--shadow)}.stat strong{font-size:24px;display:block}.stat span{color:var(--muted);font-size:12px}.sectionhead{display:flex;justify-content:space-between;gap:15px;align-items:end;margin:28px 0 15px}.sectionhead h2{margin:0;font-size:25px;letter-spacing:-.03em}.sectionhead p{margin:3px 0 0;color:var(--muted);font-size:13px}.games{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.gamecard{background:white;border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px;min-height:190px;transition:transform .2s,border-color .2s}.gamecard:hover{transform:translateY(-3px);border-color:#e9b4a5}.gameicon{width:46px;height:46px;border-radius:15px;background:var(--peach);display:grid;place-items:center;font-size:24px}.gamecard h3{margin:0;font-size:18px}.gamecard p{margin:0;color:var(--muted);font-size:13px;flex:1}.primary,.secondary,.answer,.tile{border-radius:12px;padding:11px 15px;font-weight:800;transition:transform .12s,background .12s}.primary{background:var(--red);color:white}.primary:hover{background:var(--red2);transform:translateY(-1px)}.secondary{background:#f7eee4;color:var(--ink);border:1px solid var(--line)}.small{font-size:12px;padding:8px 11px}.panel{display:none;margin:20px 0 40px;background:white;border:1px solid var(--line);border-radius:24px;padding:clamp(17px,3vw,28px);box-shadow:var(--shadow)}.panel.active{display:block;animation:rise .22s ease}@keyframes rise{from{opacity:.4;transform:translateY(7px)}to{opacity:1;transform:none}}.panelhead{display:flex;align-items:start;justify-content:space-between;gap:12px;margin-bottom:17px}.panelhead h2{margin:0;font-size:24px}.panelhead p{margin:4px 0;color:var(--muted);font-size:13px}.close{background:#f5eee6;border-radius:50%;width:38px;height:38px;font-size:20px;flex:none}.gamearea{background:#fffaf4;border:1px solid var(--line);border-radius:18px;padding:clamp(14px,3vw,23px)}.progressrow{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:12px;font-weight:750;margin-bottom:12px}.progress{height:7px;border-radius:99px;background:#f0e4d8;overflow:hidden;margin-bottom:20px}.progress>div{height:100%;background:var(--red);width:0;transition:width .2s}.prompt{font-size:13px;color:var(--muted);font-weight:750;text-align:center}.bigword{font-size:clamp(42px,8vw,68px);font-weight:900;text-align:center;line-height:1.15;margin:10px 0}.pinyin{text-align:center;color:var(--red);font-weight:800;font-size:18px}.meaning{text-align:center;font-size:21px;font-weight:800;margin:10px 0}.center{text-align:center}.rowbtn{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:16px}.answers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px}.answer{background:white;border:1px solid var(--line);text-align:left;color:var(--ink);min-height:52px}.answer:hover{border-color:#d98b79;background:#fff2e9}.answer.correct{border-color:#7bc1a5;background:#e9f8f0;color:#21694f}.answer.wrong{border-color:#e7a094;background:#fff0ed;color:#a93629}.feedback{margin-top:13px;border-radius:12px;padding:12px 14px;background:#f4eee6;font-size:13px}.feedback.good{background:#e9f8f0;color:#21694f}.feedback.bad{background:#fff0ed;color:#a93629}.hidden{display:none!important}.matchgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.matchitem{border:1px solid var(--line);background:white;border-radius:13px;padding:15px 9px;min-height:60px;font-weight:800;overflow-wrap:anywhere}.matchitem.selected{border-color:var(--red);background:#fff0e8;box-shadow:0 0 0 2px #c84e3a18}.matchitem.done{background:#e8f6ee;border-color:#9acbb1;color:#28684e;opacity:.8}.tiles{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin:18px 0}.tile{background:white;border:1px solid #e8d5c3;font-size:19px;min-width:50px}.tile.used{opacity:.25;cursor:not-allowed}.sentencebox{min-height:64px;border:2px dashed #e4c7b2;border-radius:15px;padding:10px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:7px;background:white}.sentencebox .tile{background:#ffe9dc}.timer{font-size:40px;font-weight:900;color:var(--red);text-align:center;line-height:1.1}.timerlabel{text-align:center;color:var(--muted);font-size:12px;margin:4px 0 15px}.result{padding:22px;text-align:center;background:linear-gradient(135deg,#fff0e4,#fff9e9);border-radius:17px}.result .emoji{font-size:43px}.result h3{font-size:25px;margin:7px 0}.result p{color:var(--muted);margin:4px 0 16px}.selectrow{display:flex;justify-content:center;align-items:center;gap:9px;flex-wrap:wrap;margin:12px 0 18px}.selectrow select{border:1px solid var(--line);border-radius:10px;background:white;padding:9px 12px}.foot{border-top:1px solid var(--line);padding:23px 0;color:var(--muted);font-size:12px;margin-top:35px}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#29251f;color:white;padding:11px 16px;border-radius:99px;z-index:30;box-shadow:var(--shadow);font-size:13px;max-width:90%;text-align:center}.note{font-size:12px;color:var(--muted);margin-top:14px}
+@media(min-width:760px){.games{grid-template-columns:repeat(3,minmax(0,1fr))}.gamecard:last-child{grid-column:auto}}@media(max-width:650px){.hero{grid-template-columns:1fr;padding-top:32px}.heroart{min-height:160px}.bigchar{font-size:78px}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:20px}.navlinks a{padding:7px 10px}.games{grid-template-columns:1fr}.answers{grid-template-columns:1fr}.sectionhead{align-items:start;flex-direction:column}.panelhead h2{font-size:21px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap nav">
+<a class="brand" href="./index.html"><span class="seal">汉</span><span>HÁN HỌC <small>汉学 · HỌC TIẾNG TRUNG MỖI NGÀY</small></span></a>
+<nav class="navlinks"><a href="./index.html">← Trang chính</a><a href="#games">Chọn trò chơi</a></nav>
+</div></header>
+<main class="wrap">
+<section class="hero">
+<div><div class="eyebrow">HSK 1–2 · HỌC MÀ CHƠI</div><h1>Học một chút,<br><span>nhớ lâu hơn.</span></h1><p>Luyện chữ Hán, ghi nhớ từ vựng và ôn ngữ pháp qua những trò chơi ngắn. Mỗi lượt chơi là một bước tiến nhỏ trên hành trình học tiếng Trung.</p><button class="primary" onclick="openGame('flash')">Bắt đầu học →</button></div>
+<div class="heroart" aria-label="Minh họa học tiếng Trung"><span class="floating f1">每天进步一点点 ✨</span><div class="bigchar">学</div><span class="floating f2">xué · học</span></div>
+</section>
+<section class="stats" aria-label="Tiến độ học tập">
+<div class="stat"><strong id="xpStat">0 XP</strong><span>Tổng điểm tích lũy</span></div><div class="stat"><strong id="playedStat">0</strong><span>Lượt chơi hoàn thành</span></div><div class="stat"><strong id="bestStat">0/60</strong><span>Kỷ lục thử thách 60 giây</span></div>
+</section>
+<section id="games">
+<div class="sectionhead"><div><h2>Chọn một thử thách</h2><p>Không áp lực điểm số — cứ thử, sai rồi học lại nhé!</p></div><span class="eyebrow">5 MINI GAMES</span></div>
+<div class="games">
+<article class="gamecard"><div class="gameicon">🃏</div><h3>1. Lật thẻ từ vựng</h3><p>Nhìn chữ Hán, đoán nghĩa rồi lật thẻ để xem pinyin và ví dụ. Đánh dấu từ đã nhớ hoặc cần ôn lại.</p><button class="primary" onclick="openGame('flash')">Lật thẻ ngay</button></article>
+<article class="gamecard"><div class="gameicon">🧩</div><h3>2. Ghép đôi chữ Hán</h3><p>Nối từ tiếng Trung với nghĩa tiếng Việt tương ứng. Chọn hai thẻ để tạo thành một cặp đúng.</p><button class="primary" onclick="openGame('match')">Chơi ghép đôi</button></article>
+<article class="gamecard"><div class="gameicon">⚡</div><h3>3. Thử thách 60 giây</h3><p>Trả lời nhanh các câu hỏi từ vựng. Cố gắng vượt qua kỷ lục của chính bạn trong một phút.</p><button class="primary" onclick="openGame('speed')">Bắt đầu tính giờ</button></article>
+<article class="gamecard"><div class="gameicon">🀄</div><h3>4. Sắp xếp câu</h3><p>Chọn các mảnh từ theo thứ tự đúng để tạo thành câu tiếng Trung tự nhiên.</p><button class="primary" onclick="openGame('sentence')">Xây dựng câu</button></article>
+<article class="gamecard"><div class="gameicon">✍️</div><h3>5. Chọn đúng ngữ pháp</h3><p>Ôn các cấu trúc cơ bản như 是、吗、很、在、了 và xem giải thích sau mỗi câu.</p><button class="primary" onclick="openGame('grammar')">Ôn ngữ pháp</button></article>
+</div>
+</section>
+<section class="panel" id="panel" aria-live="polite">
+<div class="panelhead"><div><h2 id="panelTitle">Trò chơi</h2><p id="panelDesc">Luyện tập tiếng Trung</p></div><button class="close" onclick="closeGame()" aria-label="Đóng trò chơi">×</button></div>
+<div class="gamearea" id="gamearea"></div>
+</section>
+<div class="note">Tiến độ và điểm số được lưu trên trình duyệt của thiết bị này bằng localStorage. Nếu xóa dữ liệu trình duyệt, tiến độ có thể bị mất.</div>
+</main>
+<footer class="foot"><div class="wrap">Hán Học 汉学 · Dành cho người học tiếng Trung trình độ HSK 1–2 · Học đều đặn, tiến bộ từng ngày.</div></footer>
+<div id="toast" class="toast hidden" role="status"></div>
+<script>
+"use strict";
+const VOCAB=[
+{h:"你好",p:"nǐ hǎo",v:"xin chào",ex:"你好！你好吗？"},
+{h:"谢谢",p:"xièxie",v:"cảm ơn",ex:"谢谢你。"},
+{h:"再见",p:"zàijiàn",v:"tạm biệt",ex:"明天见，再见！"},
+{h:"学习",p:"xuéxí",v:"học tập",ex:"我学习中文。"},
+{h:"中文",p:"Zhōngwén",v:"tiếng Trung",ex:"我喜欢中文。"},
+{h:"朋友",p:"péngyou",v:"bạn bè",ex:"他是我的朋友。"},
+{h:"老师",p:"lǎoshī",v:"giáo viên",ex:"她是老师。"},
+{h:"学生",p:"xuésheng",v:"học sinh, sinh viên",ex:"我是学生。"},
+{h:"今天",p:"jīntiān",v:"hôm nay",ex:"今天很热。"},
+{h:"明天",p:"míngtiān",v:"ngày mai",ex:"明天见。"},
+{h:"昨天",p:"zuótiān",v:"hôm qua",ex:"昨天我在家。"},
+{h:"现在",p:"xiànzài",v:"bây giờ",ex:"我现在学习。"},
+{h:"喜欢",p:"xǐhuan",v:"thích",ex:"我喜欢喝茶。"},
+{h:"吃",p:"chī",v:"ăn",ex:"我吃米饭。"},
+{h:"喝",p:"hē",v:"uống",ex:"你喝水吗？"},
+{h:"水",p:"shuǐ",v:"nước",ex:"我想喝水。"},
+{h:"家",p:"jiā",v:"nhà, gia đình",ex:"我在家。"},
+{h:"学校",p:"xuéxiào",v:"trường học",ex:"我去学校。"},
+{h:"工作",p:"gōngzuò",v:"làm việc, công việc",ex:"爸爸在工作。"},
+{h:"认识",p:"rènshi",v:"quen biết",ex:"认识你很高兴。"},
+{h:"知道",p:"zhīdào",v:"biết (thông tin)",ex:"我知道。"},
+{h:"会",p:"huì",v:"biết, có khả năng",ex:"我会说中文。"},
+{h:"正在",p:"zhèngzài",v:"đang",ex:"我正在看书。"},
+{h:"因为",p:"yīnwèi",v:"bởi vì",ex:"因为下雨，我不去。"},
+{h:"所以",p:"suǒyǐ",v:"cho nên",ex:"我很忙，所以不去。"},
+{h:"漂亮",p:"piàoliang",v:"đẹp",ex:"这件衣服很漂亮。"},
+{h:"觉得",p:"juéde",v:"cảm thấy, cho rằng",ex:"我觉得很好。"},
+{h:"一起",p:"yìqǐ",v:"cùng nhau",ex:"我们一起学习。"},
+{h:"问题",p:"wèntí",v:"câu hỏi, vấn đề",ex:"我有一个问题。"},
+{h:"帮助",p:"bāngzhù",v:"giúp đỡ",ex:"谢谢你的帮助。"}
+];
+const GRAMMAR=[
+{q:"我___学生。",opts:["是","在","吗","很"],a:"是",why:"是 dùng để nối chủ ngữ với danh từ chỉ thân phận: 我是学生。"},
+{q:"你是老师___？",opts:["很","吗","在","了"],a:"吗",why:"吗 đặt cuối câu trần thuật để tạo câu hỏi có/không."},
+{q:"今天天气___好。",opts:["是","很","吗","有"],a:"很",why:"很 thường đứng trước tính từ trong câu miêu tả: 天气很好。"},
+{q:"我___学校学习。",opts:["在","是","吗","都"],a:"在",why:"在 + địa điểm + động từ diễn tả hành động diễn ra ở đâu."},
+{q:"我___吃饭呢。",opts:["正在","是","吗","谁"],a:"正在",why:"正在 đứng trước động từ để nhấn mạnh hành động đang diễn ra."},
+{q:"我喜欢___中文。",opts:["学习","是","吗","在"],a:"学习",why:"学习中文 nghĩa là học tiếng Trung; sau 喜欢 có thể dùng động từ."},
+{q:"他不___喝咖啡。",opts:["想","是","吗","很"],a:"想",why:"不想 + động từ diễn tả không muốn làm việc gì."},
+{q:"因为下雨，___我不去。",opts:["所以","但是","吗","谁"],a:"所以",why:"因为…所以… nghĩa là bởi vì… cho nên…; trong câu này 所以 nêu kết quả."},
+{q:"你___去哪儿？",opts:["要","是","很","吗"],a:"要",why:"要 + động từ có thể diễn tả dự định hoặc mong muốn: 你要去哪儿？"},
+{q:"我昨天买___一本书。",opts:["了","吗","很","在"],a:"了",why:"了 có thể đặt sau động từ để đánh dấu hành động đã xảy ra: 买了一本书。"},
+{q:"我___会说一点儿中文。",opts:["也","吗","是","在"],a:"也",why:"也 nghĩa là cũng, thường đứng trước động từ hoặc cụm vị ngữ."},
+{q:"你想喝茶___喝水？",opts:["还是","因为","所以","正在"],a:"还是",why:"还是 dùng trong câu hỏi lựa chọn: trà hay nước?"},
+{q:"他比我___。",opts:["高","是","吗","在"],a:"高",why:"比 dùng để so sánh; tính từ đứng sau cụm so sánh: 他比我高。"},
+{q:"桌子上___一本书。",opts:["有","是","很","吗"],a:"有",why:"Địa điểm + 有 + sự vật diễn tả ở nơi đó có cái gì."},
+{q:"我___知道这件事。",opts:["不知道","不在","不是","不吗"],a:"不知道",why:"不知道 nghĩa là không biết thông tin; 不 đứng trước động từ 知道."}
+];
+const SENTENCES=[
+{words:["我","学习","中文"],answer:"我学习中文。",meaning:"Tôi học tiếng Trung."},
+{words:["他","是","我的","朋友"],answer:"他是我的朋友。",meaning:"Anh ấy là bạn của tôi."},
+{words:["你","喜欢","喝茶","吗"],answer:"你喜欢喝茶吗？",meaning:"Bạn có thích uống trà không?"},
+{words:["我","今天","在家","休息"],answer:"我今天在家休息。",meaning:"Hôm nay tôi nghỉ ngơi ở nhà."},
+{words:["她","正在","看书"],answer:"她正在看书。",meaning:"Cô ấy đang đọc sách."},
+{words:["我们","明天","一起","去","学校"],answer:"我们明天一起去学校。",meaning:"Ngày mai chúng tôi cùng đi đến trường."},
+{words:["因为","下雨","所以","我","不去"],answer:"因为下雨，所以我不去。",meaning:"Vì trời mưa nên tôi không đi."},
+{words:["我","会","说","一点儿","中文"],answer:"我会说一点儿中文。",meaning:"Tôi biết nói một chút tiếng Trung."},
+{words:["你","现在","忙","吗"],answer:"你现在忙吗？",meaning:"Bây giờ bạn có bận không?"},
+{words:["我","觉得","这个","很好"],answer:"我觉得这个很好。",meaning:"Tôi thấy cái này rất tốt."}
+];
+const STORE="hanhoc_games_v1";
+let saved=loadSaved(),game=null,idx=0,score=0,deck=[],selected=null,matched=new Set(),mistakes=0,timerId=null,timeLeft=60,usedTiles=[],currentSentence=null,questionPool=[];
+function loadSaved(){try{return Object.assign({xp:0,played:0,best:0,review:[],known:[]},JSON.parse(localStorage.getItem(STORE)||"{}"))}catch(e){return {xp:0,played:0,best:0,review:[],known:[]}}}
+function persist(){try{localStorage.setItem(STORE,JSON.stringify(saved))}catch(e){}updateStats()}
+function updateStats(){document.getElementById("xpStat").textContent=(saved.xp||0)+" XP";document.getElementById("playedStat").textContent=saved.played||0;document.getElementById("bestStat").textContent=(saved.best||0)+"/60"}
+function shuffle(arr){let a=arr.slice();for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.remove("hidden");clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.add("hidden"),2200)}
+function openGame(which){clearInterval(timerId);timerId=null;game=which;idx=0;score=0;mistakes=0;selected=null;matched=new Set();deck=[];usedTiles=[];const panel=document.getElementById("panel");panel.classList.add("active");panel.scrollIntoView({behavior:"smooth",block:"start"});const titles={flash:"Lật thẻ từ vựng",match:"Ghép đôi chữ Hán",speed:"Thử thách 60 giây",sentence:"Sắp xếp câu",grammar:"Chọn đúng ngữ pháp"};const desc={flash:"Đoán nghĩa trước khi lật thẻ.",match:"Chọn chữ Hán rồi chọn nghĩa tương ứng.",speed:"Trả lời càng nhiều câu đúng càng tốt.",sentence:"Chọn các mảnh từ theo đúng thứ tự.",grammar:"Chọn đáp án phù hợp với câu."};document.getElementById("panelTitle").textContent=titles[which];document.getElementById("panelDesc").textContent=desc[which];if(which==="flash")renderFlash();if(which==="match")renderMatch();if(which==="speed")renderSpeedStart();if(which==="sentence")renderSentence();if(which==="grammar")renderGrammar()}
+function closeGame(){clearInterval(timerId);timerId=null;document.getElementById("panel").classList.remove("active");game=null}
+function progress(total){return `<div class="progressrow"><span>Câu ${Math.min(idx+1,total)} / ${total}</span><span>Điểm: ${score}</span></div><div class="progress"><div style="width:${Math.min(100,idx/total*100)}%"></div></div>`}
+function addXP(n){saved.xp=(saved.xp||0)+n;persist()}
+function completeGame(points){saved.played=(saved.played||0)+1;addXP(points);persist()}
+function endResult(title,detail,points=score){clearInterval(timerId);timerId=null;const area=document.getElementById("gamearea");area.innerHTML=`<div class="result"><div class="emoji">${points>=8?"🎉":points>=4?"🌱":"💪"}</div><h3>${title}</h3><p>${detail}</p><p><strong>+${Math.max(0,points*5)} XP</strong> cho lượt chơi này</p><button class="primary" onclick="openGame('${game}')">Chơi lại</button> <button class="secondary" onclick="closeGame()">Xong</button></div>`;completeGame(Math.max(0,points*5))}
+function renderFlash(){deck=shuffle(VOCAB).slice(0,10);idx=0;score=0;showFlash()}
+function showFlash(){const area=document.getElementById("gamearea");if(idx>=deck.length){endResult("Hoàn thành bộ thẻ!",`Bạn đánh dấu đã nhớ ${score} / ${deck.length} từ. Từ cần ôn lại đã được lưu vào danh sách ôn tập.`);return}const w=deck[idx];const revealed=window._flashRevealed===true;area.innerHTML=`${progress(deck.length)}<div class="prompt">ĐỌC CHỮ HÁN VÀ THỬ NHỚ NGHĨA</div><div class="bigword">${w.h}</div>${revealed?`<div class="pinyin">${w.p}</div><div class="meaning">${w.v}</div><div class="feedback">Ví dụ: ${w.ex}</div><div class="rowbtn"><button class="secondary" onclick="rateFlash(false)">↻ Cần ôn lại</button><button class="primary" onclick="rateFlash(true)">✓ Đã nhớ</button></div>`:`<div class="center"><button class="primary" onclick="window._flashRevealed=true;showFlash()">Lật thẻ để xem đáp án</button></div><div class="note center">Tự đoán nghĩa trước khi bấm lật nhé.</div>`}`;window._flashRevealed=false}
+function rateFlash(known){const w=deck[idx];const set=new Set(saved[known?"known":"review"]||[]);set.add(w.h);saved[known?"known":"review"]=[...set];if(known)score++;persist();idx++;window._flashRevealed=false;showFlash()}
+function renderMatch(){const chosen=shuffle(VOCAB).slice(0,6);deck=shuffle([...chosen.map((w,i)=>({id:w.h,type:"han",label:w.h,word:w})),...chosen.map(w=>({id:w.h,type:"vi",label:w.v,word:w}))]);idx=0;score=0;matched=new Set();selected=null;showMatch()}
+function showMatch(){const area=document.getElementById("gamearea");if(matched.size===6){endResult("Ghép xong rồi!",`Bạn đã tìm được 6 cặp từ. Số lần chọn sai: ${mistakes}.`,Math.max(1,6-Math.floor(mistakes/2)));return}area.innerHTML=`<div class="progressrow"><span>Đã ghép ${matched.size}/6 cặp</span><span>Lỗi: ${mistakes}</span></div><div class="progress"><div style="width:${matched.size/6*100}%"></div></div><p class="prompt">Chọn một thẻ chữ Hán, sau đó chọn nghĩa tiếng Việt.</p><div class="matchgrid">${deck.map((c,i)=>`<button class="matchitem ${matched.has(c.id)?"done":""} ${selected===i?"selected":""}" ${matched.has(c.id)?"disabled":""} onclick="pickMatch(${i})">${matched.has(c.id)?"✓":c.label}</button>`).join("")}</div><div id="matchFeedback" class="feedback ${matched.size?"good":""}">${matched.size?"Tốt lắm! Tiếp tục tìm các cặp còn lại.":"Mẹo: hãy đọc pinyin trong đầu trước khi ghép."}</div>`}
+function pickMatch(i){if(matched.has(deck[i].id))return;if(selected===null){selected=i;showMatch();return}if(selected===i){selected=null;showMatch();return}const a=deck[selected],b=deck[i];if(a.id===b.id&&a.type!==b.type){matched.add(a.id);score++;addXP(2);toast("Chính xác! +2 XP")}else{mistakes++;toast("Chưa đúng, thử cặp khác nhé.")}selected=null;showMatch()}
+function renderSpeedStart(){document.getElementById("gamearea").innerHTML=`<div class="result"><div class="emoji">⏱️</div><h3>Sẵn sàng chưa?</h3><p>Trong 60 giây, chọn nghĩa đúng của càng nhiều từ càng tốt. Mỗi câu đúng được 1 điểm.</p><div class="selectrow"><label for="speedLevel">Bộ câu hỏi</label><select id="speedLevel"><option value="all">Tất cả từ HSK 1–2</option><option value="basic">Từ cơ bản</option></select></div><button class="primary" onclick="startSpeed()">Bắt đầu 60 giây</button></div>`}
+function startSpeed(){deck=shuffle(VOCAB);idx=0;score=0;mistakes=0;timeLeft=60;questionPool=deck.slice();showSpeedQuestion();clearInterval(timerId);timerId=setInterval(()=>{timeLeft--;const t=document.getElementById("timeLeft");if(t)t.textContent=timeLeft;if(timeLeft<=0)endSpeed()},1000)}
+function showSpeedQuestion(){if(!game||game!=="speed")return;const w=questionPool[idx%questionPool.length];const opts=shuffle([w.v,...shuffle(VOCAB.filter(x=>x.h!==w.h)).slice(0,3).map(x=>x.v)]);document.getElementById("gamearea").innerHTML=`<div class="timer" id="timeLeft">${timeLeft}</div><div class="timerlabel">GIÂY CÒN LẠI</div><div class="progress"><div style="width:${timeLeft/60*100}%"></div></div><div class="prompt">CHỌN NGHĨA ĐÚNG</div><div class="bigword">${w.h}</div><div class="pinyin">${w.p}</div><div class="answers">${opts.map(o=>`<button class="answer" onclick="answerSpeed('${encodeURIComponent(w.v)}','${encodeURIComponent(o)}')">${o}</button>`).join("")}</div><div class="progressrow" style="margin-top:15px"><span>Đúng: ${score}</span><span>Đã trả lời: ${idx}</span></div>`}
+function answerSpeed(correct,chosen){if(timeLeft<=0)return;if(decodeURIComponent(correct)===decodeURIComponent(chosen)){score++;addXP(1)}else mistakes++;idx++;showSpeedQuestion()}
+function endSpeed(){clearInterval(timerId);timerId=null;if(score>(saved.best||0))saved.best=score;const oldScore=score;saved.played=(saved.played||0)+1;addXP(score*3);persist();document.getElementById("gamearea").innerHTML=`<div class="result"><div class="emoji">${score>=15?"🏆":"⚡"}</div><h3>Hết giờ!</h3><p>Bạn trả lời đúng <strong>${score}</strong> câu, sai ${mistakes} câu.</p><p>Kỷ lục của bạn: <strong>${saved.best}/60</strong></p><p>+${score*3} XP</p><button class="primary" onclick="openGame('speed')">Chơi lại</button> <button class="secondary" onclick="closeGame()">Xong</button></div>`}
+function renderSentence(){deck=shuffle(SENTENCES).slice(0,8);idx=0;score=0;usedTiles=[];showSentence()}
+function showSentence(){if(idx>=deck.length){endResult("Bạn đã hoàn thành!",`Bạn sắp xếp đúng ${score}/${deck.length} câu.`,score);return}currentSentence=deck[idx];usedTiles=[];const words=shuffle(currentSentence.words.map((w,i)=>({id:i,text:w})));window._sentenceTiles=words;drawSentence()}
+function drawSentence(feedback=""){const s=currentSentence;const area=document.getElementById("gamearea");area.innerHTML=`${progress(deck.length)}<p class="prompt">CHỌN CÁC MẢNH TỪ THEO ĐÚNG THỨ TỰ</p><div class="sentencebox">${usedTiles.length?usedTiles.map(t=>`<button class="tile" onclick="removeTile(${t.id})">${t.text}</button>`).join(""):'<span style="color:#a99b8b;font-size:13px">Câu của bạn sẽ xuất hiện ở đây…</span>'}</div><div class="tiles">${window._sentenceTiles.map(t=>`<button class="tile ${usedTiles.some(u=>u.id===t.id)?"used":""}" ${usedTiles.some(u=>u.id===t.id)?"disabled":""} onclick="addTile(${t.id})">${t.text}</button>`).join("")}</div><div class="rowbtn"><button class="secondary" onclick="usedTiles=[];drawSentence()">Làm lại</button><button class="primary" onclick="checkSentence()">Kiểm tra câu</button></div>${feedback?`<div class="feedback ${feedback.startsWith("Đúng")?"good":"bad"}">${feedback}</div>`:""}<div class="note center">Dấu câu có thể được thêm tự động khi kiểm tra.</div>`}
+function addTile(id){if(usedTiles.some(t=>t.id===id))return;usedTiles.push(window._sentenceTiles.find(t=>t.id===id));drawSentence()}
+function removeTile(id){usedTiles=usedTiles.filter(t=>t.id!==id);drawSentence()}
+function checkSentence(){const made=usedTiles.map(t=>t.text).join("");const expected=currentSentence.words.join("");if(made===expected){score++;addXP(2);toast("Đúng rồi! +2 XP");const area=document.getElementById("gamearea");area.innerHTML=`${progress(deck.length)}<div class="feedback good"><strong>Đúng!</strong> ${currentSentence.answer}<br>${currentSentence.meaning}</div><div class="rowbtn"><button class="primary" onclick="idx++;showSentence()">Câu tiếp theo →</button></div>`}else{drawSentence(`Chưa đúng lắm. Gợi ý: ${currentSentence.meaning}`)}}
+function renderGrammar(){deck=shuffle(GRAMMAR).slice(0,10);idx=0;score=0;showGrammar()}
+function showGrammar(){if(idx>=deck.length){endResult("Ôn ngữ pháp hoàn tất!",`Bạn chọn đúng ${score}/${deck.length} câu. Hãy đọc lại phần giải thích ở những câu bạn còn phân vân.`,score);return}const q=deck[idx];document.getElementById("gamearea").innerHTML=`${progress(deck.length)}<p class="prompt">CHỌN TỪ PHÙ HỢP ĐỂ HOÀN THÀNH CÂU</p><div class="bigword" style="font-size:clamp(24px,5vw,36px);margin:22px 0">${q.q}</div><div class="answers">${shuffle(q.opts).map(o=>`<button class="answer" onclick="answerGrammar('${encodeURIComponent(q.a)}','${encodeURIComponent(o)}')">${o}</button>`).join("")}</div><div id="grammarFeedback"></div>`}
+function answerGrammar(correct,chosen){const c=decodeURIComponent(correct),v=decodeURIComponent(chosen),q=deck[idx];const ok=c===v;if(ok){score++;addXP(2)}const area=document.getElementById("gamearea");area.querySelectorAll(".answer").forEach(b=>{b.disabled=true;if(b.textContent===c)b.classList.add("correct");else if(b.textContent===v&&!ok)b.classList.add("wrong")});document.getElementById("grammarFeedback").innerHTML=`<div class="feedback ${ok?"good":"bad"}"><strong>${ok?"Chính xác!":"Đáp án đúng: "+c}</strong><br>${q.why}</div><div class="rowbtn"><button class="primary" onclick="idx++;showGrammar()">${idx===deck.length-1?"Xem kết quả":"Câu tiếp theo →"}</button></div>`}
+updateStats();
+</script>
+</body>
+</html>
